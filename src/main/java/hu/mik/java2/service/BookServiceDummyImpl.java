@@ -75,8 +75,8 @@ public class BookServiceDummyImpl implements BookService {
 
 	@Override
 	public synchronized void deleteBook(Book book) {
-		// TODO Auto-generated method stub
-		
+		Book bookById=getBookById(book.getId());
+		bookList.remove(bookById);		
 	}
 
 }
