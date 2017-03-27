@@ -7,6 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Könyvek listája</title>
+<link rel="Stylesheet" href="proba.css"/>
 </head>
 <body>
 	<table border= "1">
