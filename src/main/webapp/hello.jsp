@@ -21,16 +21,7 @@
 	<c:forEach items="${names}" var="name">
 		<mik:sayHello>${name}</mik:sayHello>
 	</c:forEach>
-	<br></br>
-	<% 	
-		Class cls = Class.forName("hu.mik.java2.book.bean.Book");
-		Object obj = cls.newInstance();
-		Field id=obj.getClass().getDeclaredField("id");
-		id.setAccessible(true);
-		id.set(obj, 42);
-	%>
-	<%=	id.get(obj) %>
-	
+	<br></br>	
 	
 	<a href="book_list">Könyvek listája</a>
 </body>
