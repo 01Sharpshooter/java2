@@ -26,15 +26,16 @@ public class RegistrationService {
 	
 	public void registration(String username, String password){
 		Connection connection=null;
-		PreparedStatement preparedStatement=null;
-		int id=getNextId();		
+		PreparedStatement preparedStatement=null;	
+		EncryptService es=new EncryptService();
 		
 		try {
+			int id=getNextId();
 			connection=this.dataSource.getConnection();
 			preparedStatement=connection.prepareStatement("insert into t_book_users(id, Username, GivenPW) values(?,?,?)");
 			preparedStatement.setInt(1, id);
 			preparedStatement.setString(2, username);
-			preparedStatement.setString(3, password);
+			preparedStatement.setString(3, es.encrypt(password));
 			preparedStatement.executeQuery();
 			preparedStatement=connection.prepareStatement("insert into t_book_roles(id, Username, userid) values(?,?,?)");
 			preparedStatement.setInt(1, id);

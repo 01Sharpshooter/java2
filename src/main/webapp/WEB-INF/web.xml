@@ -115,4 +115,10 @@
 			<url-pattern>/error.html</url-pattern>
 		</web-resource-collection>
 	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+		<web-resource-name>Foglalt felhasználónév</web-resource-name>
+			<url-pattern>/foglalt.html</url-pattern>
+		</web-resource-collection>
+	</security-constraint>
 </web-app>
