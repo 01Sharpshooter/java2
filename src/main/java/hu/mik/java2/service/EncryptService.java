@@ -1,14 +1,11 @@
 package hu.mik.java2.service;
 
-import java.io.UnsupportedEncodingException;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import org.jboss.crypto.CryptoUtil;
 
 public class EncryptService {
-	
 	public EncryptService(){
 		
 	}

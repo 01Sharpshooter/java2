@@ -37,10 +37,9 @@ public class RegistrationService {
 			preparedStatement.setString(2, username);
 			preparedStatement.setString(3, es.encrypt(password));
 			preparedStatement.executeQuery();
-			preparedStatement=connection.prepareStatement("insert into t_book_roles(id, Username, userid) values(?,?,?)");
+			preparedStatement=connection.prepareStatement("insert into t_book_roles(id, Username) values(?,?)");
 			preparedStatement.setInt(1, id);
 			preparedStatement.setString(2, username);
-			preparedStatement.setInt(3, id);
 			preparedStatement.executeQuery();
 		} catch (SQLException e) {
 			throw new RuntimeException();
