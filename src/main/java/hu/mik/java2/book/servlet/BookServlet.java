@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import hu.mik.java2.service.BookService;
 import hu.mik.java2.service.ServiceUtils;
 
-@WebServlet(urlPatterns = "/book_list")
+//@WebServlet(urlPatterns = "/book_list")
 public class BookServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

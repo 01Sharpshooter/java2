@@ -11,8 +11,11 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
+import org.springframework.stereotype.Component;
+
 import hu.mik.java2.book.bean.Book;
 
+@Component
 public class BookServiceNativeDbImpl implements BookService{
 
 	private DataSource dataSource;

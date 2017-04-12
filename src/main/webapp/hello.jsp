@@ -23,6 +23,6 @@
 	</c:forEach>
 	<br></br>	
 	
-	<a href="book_list">Könyvek listája</a>
+	<a href="booking/book_list">Könyvek listája</a>
 </body>
 </html>

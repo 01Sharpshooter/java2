@@ -13,7 +13,7 @@ import hu.mik.java2.book.bean.Book;
 import hu.mik.java2.service.BookService;
 import hu.mik.java2.service.ServiceUtils;
 
-@WebServlet(urlPatterns = "/book_details")
+//@WebServlet(urlPatterns = "/book_details")
 public class BookDetailsServlet extends HttpServlet{
 
 	@Override
