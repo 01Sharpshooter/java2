@@ -30,15 +30,17 @@
 				<td><c:out value="${book.pubYear}" /></td>
 				<td>
 				<a href="book_details?bookId=${book.id}" >Megtekintés</a>
-				<c:if test="${isEditor}">
+<%-- 				<c:if test="${isEditor}"> --%>
 				<a href="book_edit?bookId=${book.id}" >Szerkesztés</a>				
 				<a href="book_delete?bookId=${book.id}" >Törlés</a>
-				</c:if>
+<%-- 				</c:if> --%>
 				</td>
 			</tr>
 		</c:forEach>
 	</table>
+<%-- 	<c:if test="${isEditor}"> --%>
 	<a href="book_edit">Könyv felvitele</a>
+<%-- 	</c:if> --%>
 	<c:if test="${empty books}">Nincs felvéve könyv</c:if>
 </body>
 </html>
