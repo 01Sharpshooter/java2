@@ -132,14 +132,28 @@ public class BookServiceNativeDbImpl implements BookService {
 
 	@Override
 	public Book updateBook(Book book) {
-		// TODO Auto-generated method stub
-		return null;
+		this.deleteBook(book);
+		this.saveBook(book);
+		return book;
 	}
 
 	@Override
 	public void deleteBook(Book book) {
-		// TODO Auto-generated method stub
-
+		Connection connection=null;
+		PreparedStatement preparedStatement=null;
+		
+		try {
+			connection=dataSource.getConnection();
+			preparedStatement=connection.prepareStatement("DELETE from t_book b WHERE b.id=?");
+			preparedStatement.setInt(1, book.getId());
+			
+			preparedStatement.executeQuery();
+		} catch (SQLException e) {
+			throw new RuntimeException();
+		}finally {
+			this.closeResource(connection);
+			this.closeResource(preparedStatement);
+		}
 	}
 
 	private Integer getNextId() {

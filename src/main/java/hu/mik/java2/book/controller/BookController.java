@@ -70,5 +70,24 @@ public class BookController {
 
 		return "book_details";
 	}
-
+	
+	@RequestMapping(value="/book_delete", method=RequestMethod.GET)
+	public String bookDeleteGet(Integer bookId, Model model){
+		Book deleteBook=new Book();
+		
+		if(bookId!=null){
+			deleteBook=bookService.getBookById(bookId);
+		}
+		
+		model.addAttribute("book", deleteBook);
+		return "book_delete";
+	}
+	
+	@RequestMapping(value="/book_delete", method=RequestMethod.POST)
+	public String bookDeletePost(Book book, Model model){
+		bookService.deleteBook(book);
+		model.addAttribute("books", bookService.listBooks());
+		
+		return "book_list";
+	}
 }
