@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+	<context-root>orai-munka</context-root>
+	
+    <security-domain>java:/jaas/db-auth</security-domain>
+</jboss-web>

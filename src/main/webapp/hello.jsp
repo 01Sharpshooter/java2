@@ -13,7 +13,7 @@
 <body>
 	<h1>Hello World!</h1>
 	
-	<%@ page import="java.io.*, java.util.*, javax.servlet.*" %>
+	<%@ page import="java.io.*, java.util.*, javax.servlet.*, java.lang.reflect.*" %>
 	<% Date date = new Date(); %>
 	<h2><%= date.toString() %></h2>
 	
@@ -21,6 +21,7 @@
 	<c:forEach items="${names}" var="name">
 		<mik:sayHello>${name}</mik:sayHello>
 	</c:forEach>
+	<br></br>	
 	
 	<a href="booking/book_list">Könyvek listája</a>
 </body>
